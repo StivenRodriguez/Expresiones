@@ -34,8 +34,6 @@ def expRegEnteros():
     return  render_template('index.html', data=dataResult)
 
 
-
-
 @app.route('/validarReales', methods=['GET', 'POST'])
 def expRegReales():
     output = request.form.to_dict()

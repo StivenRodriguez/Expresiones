@@ -1,8 +1,6 @@
 import re
 import string # Importamos el modulo regex
 
-
-
 def ValidarCadenasConNumeros(cadena:string):
     patron = re.compile(r"^([aA-zZ][a-z]+[ ]?){1,6}")
     if patron.match(cadena):
