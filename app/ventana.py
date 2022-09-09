@@ -7,6 +7,16 @@ ventana = Tk()
 ventana.title = "Expresiones regulares"
 ventana.geometry("600x300")
 
+def expRegEnterosAFD():
+    numEnteros = txt1.get()
+    estado = controladorIndex.ValidarEnterosAutomata(numEnteros)
+    messagebox.showinfo(message=estado, title="Numeros Enteros AFD")
+
+def expRegRealesAFD():
+    numEnteros = txt2.get()
+    estado = controladorIndex.validarRealesAutomata(numEnteros)
+    messagebox.showinfo(message=estado, title="Numeros Reales AFD")
+
 def expRegEnteros():
     numEnteros = txt1.get()
     estado = controladorIndex.ValidarEnteros(numEnteros)
@@ -44,14 +54,14 @@ lbl1 = Label(ventana, text="Numero entero:", font= ('Helvetica 13'), background=
 lbl1.place(x=10, y=10, width=150, height=30)
 txt1 = Entry(ventana, text="")
 txt1.place(x=153, y=10, width=100, height=30)
-btn1 = Button(ventana, text="Validar", command=expRegEnteros)
+btn1 = Button(ventana, text="Validar", command=expRegEnterosAFD)
 btn1.place(x=255, y=10, width=80, height=30)
 
 lbl2 = Label(ventana, text="Numero Real:", font= ('Helvetica 13'), background="#0184ce", fg="white")
 lbl2.place(x=10, y=50, width=150, height=30)
 txt2 = Entry(ventana, text="")
 txt2.place(x=153, y=50, width=100, height=30)
-btn2 = Button(ventana, text="Validar", command=expRegReales)
+btn2 = Button(ventana, text="Validar", command=expRegRealesAFD)
 btn2.place(x=255, y=50, width=80, height=30)
 
 lbl3 = Label(ventana, text="Notación:", font= ('Helvetica 13'), background="#0184ce", fg="white")

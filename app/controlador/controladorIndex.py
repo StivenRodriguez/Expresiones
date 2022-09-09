@@ -1,4 +1,5 @@
 from transversales import expresionesRegulares
+from transversales import automataExpresionesRegulares
 import string # Importamos el modulo regex
 
 def ValidarEnteros(numero:string):
@@ -18,3 +19,10 @@ def ValidarEmail(email:string):
     return estadoEmail
 
 
+def ValidarEnterosAutomata(numero: string):
+    estadoEntero = automataExpresionesRegulares.validarnumeroEnteros(numero)
+    return estadoEntero
+
+def validarRealesAutomata(numero: string):
+    estadoReal = automataExpresionesRegulares.validarnumerosReales(numero)
+    return estadoReal
