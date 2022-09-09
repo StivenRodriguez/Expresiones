@@ -1,7 +1,8 @@
 from tkinter import *  
 from tkinter import messagebox
 from turtle import color
-from controlador import controladorIndex
+# from controlador import controladorIndex
+import transversales.ExpresionesRegulares as controladorIndex
 
 ventana = Tk()
 ventana.title = "Expresiones regulares"
